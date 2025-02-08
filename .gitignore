@@ -1,0 +1,25 @@
+# Node.js dependencies
+node_modules/
+
+# Build output directory
+dist/
+
+# Environment variable files (you can also commit a sample file, e.g., .env.example, if needed)
+.env
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+logs/
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE directories and files
+.vscode/
+.idea/
+
+# Optional: Temporary files
+tmp/
