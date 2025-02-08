@@ -19,7 +19,6 @@ A RESTful API for managing SWIFT code data. This application parses SWIFT code i
   - [Docker Commands](#docker-commands)
 - [Testing](#testing)
 - [Environment Variables](#environment-variables)
-- [License](#license)
 
 ## Features
 
