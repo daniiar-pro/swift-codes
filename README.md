@@ -7,7 +7,7 @@ A RESTful API for managing SWIFT code data. This application parses SWIFT code i
 - [ATTENTION](#attention)
 - [Potential Improvements](#potential-improvements)
 - [Tech Stack](#tech-stack)
-- [Edge Cases Handled](#edge-cases)
+- [Edge Cases Handled](#edge-cases-handled)
 - [Features](#features)
 - [Project Structure](#project-structure)
 - [Endpoints](#endpoints)
