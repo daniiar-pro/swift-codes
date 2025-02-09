@@ -63,7 +63,7 @@ can you still run it manually (I am 1000% sure) endpoints are well written and h
 1. Initially 5 swift code (and details) will display at the `/` since its initial page render, would make more sense with some initial data
    from the user experience perspective
 
-2. Posting same data twice, throws an error, since we already have the same data (same swift code, swift codes sare unique)
+2. Posting same data twice, throws an error, since we already have the same data (same swift code, swift codes are unique)
 
 3. Deleting the data which is not exist (e.g: data which is already deleted)
 
