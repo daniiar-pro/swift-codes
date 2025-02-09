@@ -1,22 +1,26 @@
-// src/routes/swiftCodesRoutes.ts
-import { Router } from 'express';
+import { Router } from "express";
 import {
   getSwiftCodesByCountry,
   getSwiftCodeDetails,
   createSwiftCode,
-  deleteSwiftCode
-} from '../controllers/swiftCodesController';
+  deleteSwiftCode,
+  displaySomeInitialDataForBetterUX,
+} from "../modules/swiftCodesController";
 
 export const router = Router();
 
-// GET all SWIFT codes for a given country
-router.get('/country/:countryISO2code', getSwiftCodesByCountry);
+// Displaying initial 5 swift code (and details for  / path, since its better than displaying nothing when page initially loads)
 
-// GET details for a single SWIFT code
-router.get('/:swiftCode', getSwiftCodeDetails);
+router.get("/", displaySomeInitialDataForBetterUX);
 
-// POST a new SWIFT code entry
-router.post('/', createSwiftCode);
+//  Get details By Swift Code
+router.get("/:swiftCode", getSwiftCodeDetails);
 
-// DELETE a SWIFT code entry
-router.delete('/:swiftCode', deleteSwiftCode);
+// Get detail By Country
+router.get("/country/:countryISO2code", getSwiftCodesByCountry);
+
+//  Add new swift code (and details)
+router.post("/", createSwiftCode);
+
+//  Delete swift code (and details)
+router.delete("/:swiftCode", deleteSwiftCode);

@@ -1,21 +1,28 @@
-# Use official Node.js image
-FROM node:18
+FROM node:18-alpine AS builder
 
-# Create app directory
 WORKDIR /usr/src/app
 
-# Copy package files and install dependencies
 COPY package*.json ./
-RUN npm install
+RUN npm ci
 
-# Copy the rest of the application code
 COPY . .
 
-# Build the TypeScript code
 RUN npm run build
 
-# Expose port 8080
+FROM node:18-alpine
+
+WORKDIR /usr/src/app
+
+RUN mkdir -p data
+
+COPY package*.json ./
+RUN npm ci --only=production
+
+COPY --from=builder /usr/src/app/dist ./dist
+
+COPY --from=builder /usr/src/app/src ./src
+
 EXPOSE 8080
 
-# Start the application
-CMD [ "npm", "start" ]
+
+CMD [ "sh", "-c", "npm run seed && node dist/index.js" ]

@@ -4,8 +4,9 @@
     "outDir": "dist",
     "rootDir": "src",
     "esModuleInterop": true,
-    "moduleResolution": "nodenext",
-    "module": "NodeNext",
+    "moduleResolution": "node",
+    "target": "ESNext",
+    "module": "ESNext",
     "strict": true
   },
   "exclude": ["tests"]
