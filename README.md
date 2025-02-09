@@ -27,7 +27,7 @@ A RESTful API for managing SWIFT code data. This application parses SWIFT code i
 1. I did my best to write clean and maintainable code, by following best practices, colocation, dependency injection, strong typing, data validations,
 
 2. IT IS my first time using Docker, from my side everything looks good, I hope it will be the same from you side, in case if it fails, please 
-can you still run it manually (I am 1000%) endpoints are well written and handled much more edge cases
+can you still run it manually (I am 1000% sure) endpoints are well written and handled much more edge cases
 
 3. PLEASE, even though running with Docker fails, can you please still run it manually, please, please, please, I PUT MY SOUL IN THIS WORK :)
 
