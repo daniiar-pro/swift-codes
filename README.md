@@ -58,7 +58,7 @@ can you still run it manually (I am 1000% sure) endpoints are well written and h
 7. Vitest (Unit testing and Integration testing)
 8. Docker Containerization
 
-## Edge Cases
+## Edge Cases Handled
 
 1. Initially 5 swift code (and details) will display at the `/` since its initial page render, would make more sense with some initial data
    from the user experience perspective
