@@ -5,6 +5,7 @@ A RESTful API for managing SWIFT code data. This application parses SWIFT code i
 ## Table of Contents
 
 - [ATTENTION](#attention)
+- [Potential Improvements](#potential-improvements)
 - [Tech Stack](#tech-stack)
 - [Edge Cases Handled](#edge-cases)
 - [Features](#features)
@@ -39,6 +40,12 @@ can you still run it manually (I am 1000% sure) endpoints are well written and h
 
 5. If it's possible, would you mind giving some feedback (code review) and forgive some mistakes :) thanks a lot in advance
 
+
+## Potential Improvements
+1. Writing more test cases so that test coverage goes up to 90-95%
+2. Code style guide usage (depending on the team e.g : Airbnb style guide , Google's or specific to the company) which makes consistent team communication between developers
+3. Update, now it only implements CRD, fully implementing CRUD, by adding update would make it much more complete
+4. Database migrations history, now there is no history of Database migrations, having the history of migrations would also make this much more improved 
 
 ## Tech Stack
 
