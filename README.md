@@ -60,7 +60,7 @@ can you still run it manually (I am 1000% sure) endpoints are well written and h
 
 ## Edge Cases
 
-1. Initially 5 swift code (and details) will display at the `/` since its initial page render, would make more sense with some initial data
+1. Initially 5 swift code (and details) will display at the `http://localhost:8081/v1/swift-codes` since its initial page render, would make more sense with some initial data
    from the user experience perspective
 
 2. Posting same data twice, throws an error, since we already have the same data (same swift code, swift codes sare unique)

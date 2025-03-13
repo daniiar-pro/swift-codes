@@ -1,28 +1,16 @@
-FROM node:18-alpine AS builder
-
-WORKDIR /usr/src/app
-
-COPY package*.json ./
-RUN npm ci
-
-COPY . .
-
-RUN npm run build
-
 FROM node:18-alpine
 
 WORKDIR /usr/src/app
 
-RUN mkdir -p data
-
 COPY package*.json ./
-RUN npm ci --only=production
+RUN npm install
 
-COPY --from=builder /usr/src/app/dist ./dist
+COPY . .
 
-COPY --from=builder /usr/src/app/src ./src
+COPY data ./data
+
+RUN npm run build
 
 EXPOSE 8080
 
-
-CMD [ "sh", "-c", "npm run seed && node dist/index.js" ]
+CMD [ "sh", "-c", "npm run seed && npm run dev" ]
