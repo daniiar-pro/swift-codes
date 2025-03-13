@@ -4,7 +4,7 @@ A RESTful API for managing SWIFT code data. This application parses SWIFT code i
 
 ## Table of Contents
 
-- [ATTENTION](#attention)
+
 - [Potential Improvements](#potential-improvements)
 - [Tech Stack](#tech-stack)
 - [Edge Cases Handled](#edge-cases)
@@ -24,21 +24,6 @@ A RESTful API for managing SWIFT code data. This application parses SWIFT code i
 - [Testing](#testing)
 - [Environment Variables](#environment-variables)
 
-## ATTENTION
-1. I did my best to write clean and maintainable code, by following best practices, colocation, dependency injection, strong typing, data validations,
-
-2. IT IS my first time using Docker, from my side everything looks good, I hope it will be the same from you side, in case if it fails, please 
-can you still run it manually (I am 1000% sure) endpoints are well written and handled much more edge cases
-
-3. PLEASE, even though running with Docker fails, can you please still run it manually, please, please, please, I PUT MY SOUL IN THIS WORK :)
-
-4. My apporoach (data flow):
-  -  ```git clone https://github.com/daniiar-pro/swift-codes.git```
-  - ``` git install``` (root folder)
-  - ``` npm run seed``` (Retrieves all the data from excel sheet and imports it to the SQL database) (can't seed more than once, edge case handled)
-
-
-5. If it's possible, would you mind giving some feedback (code review) and forgive some mistakes :) thanks a lot in advance
 
 
 ## Potential Improvements
@@ -225,63 +210,20 @@ npm run seed
 npm run dev
 ```
 
-The API will be available at http://localhost:8080.
+The API will be available at [http://localhost:8080](http://localhost:8081/v1/swift-codes).
 
 ## Docker
 
 ### Docker Commands
 
-1. Build and Run the Containers:
-   Make sure Docker Desktop is running, then execute:
-   This project includes a multi-stage Dockerfile to build and run the application in a production-ready environment.
+Pull the Image from Docker Hub, using command:
+``` docker pull daniiar7/swift-codes:latest```
 
-### Build the Docker Image
+Once Image has been pulled, Run:
+ ``` docker run -p 8081:8080 daniiar7/swift-codes:latest```
 
-From the root of your repository, run:
+The API will be accessible at [http://localhost:8080](http://localhost:8081/v1/swift-codes).
 
-```
-docker build -t swift-codes-app .
-```
-
-## Run the Docker Container
-
-Once the image is built, run the container on port 8080:
-
-```
-docker run -p 8080:8080 swift-codes-app
-```
-
-Your application will be accessible at http://localhost:8080
-
-### Using Docker Compose
-
-If you prefer to use Docker Compose, you can build and run the application with:
-
-```
-
-docker compose up --build
-
-```
-
-This command builds the Docker image (running npm install inside the container) and starts the application. The API will be accessible at http://localhost:8080.
-
-2. Stopping the Containers:
-   To stop the running containers, run:
-
-```
-
-docker compose down
-
-```
-
-3. Rebuilding the Image:
-   If you update the code or configuration, rebuild the image with:
-
-```
-
-docker compose up --build
-
-```
 
 ### Testing
 
