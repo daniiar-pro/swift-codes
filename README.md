@@ -210,7 +210,7 @@ npm run seed
 npm run dev
 ```
 
-The API will be available at [http://localhost:8080](http://localhost:8081/v1/swift-codes).
+The API will be available at [http://localhost:8081/v1/swift-codes](http://localhost:8081/v1/swift-codes).
 
 ## Docker
 
@@ -222,7 +222,7 @@ Pull the Image from Docker Hub, using command:
 Once Image has been pulled, Run:
  ``` docker run -p 8081:8080 daniiar7/swift-codes:latest```
 
-The API will be accessible at [http://localhost:8080](http://localhost:8081/v1/swift-codes).
+The API will be accessible at [http://localhost:8081/v1/swift-codes](http://localhost:8081/v1/swift-codes).
 
 
 ### Testing
